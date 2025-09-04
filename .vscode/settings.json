@@ -1,0 +1,8 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.quickSuggestions": { "strings": "on" },
+  "terminal.integrated.scrollback": 10000,
+  "markdownlint.config": {
+    "extends": ".markdownlint.json"
+  }
+}

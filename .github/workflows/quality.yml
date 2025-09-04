@@ -1,0 +1,60 @@
+name: Quality Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  quality-checks:
+    name: All Quality Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "pnpm"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: "10.15.1"
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Check Markdown Quality
+        run: pnpm markdownlint:check
+
+      - name: Check Code Formatting
+        run: pnpm prettier:check
+
+      - name: Check Package.json Sorting
+        run: pnpm sort-package-json:check
+
+      - name: Validate File Naming Convention
+        run: |
+          if [ ! -d "docs/" ]; then
+            echo "Error: docs/ directory does not exist"
+            exit 1
+          fi
+
+          invalid_files=$(find docs/ -name "*.md" | grep -v -E "^docs/[A-Z_]+\.md$" || true)
+          if [ -n "$invalid_files" ]; then
+            echo "Error: Files do not follow UPPERCASE_WITH_UNDERSCORES naming convention:"
+            echo "$invalid_files"
+            exit 1
+          fi
+
+          echo "All documentation files follow naming convention"

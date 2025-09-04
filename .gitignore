@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Logs
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+#Claude
+CLAUDE.local.md

@@ -1,0 +1,5 @@
+{
+  "*.{json,yml,yaml}": "npx prettier --write",
+  "*.md": ["npx markdownlint --fix", "npx prettier --write"],
+  "**/package.json": ["npx sort-package-json"]
+}

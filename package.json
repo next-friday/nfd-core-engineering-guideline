@@ -1,0 +1,52 @@
+{
+  "name": "nfd-core-engineering-guideline",
+  "version": "1.0.0",
+  "description": "Centralized engineering guidelines for Next Friday covering naming conventions, code style, workflows, infrastructure standards, and best practices across the organization.",
+  "keywords": [
+    "engineering",
+    "guidelines",
+    "standards",
+    "naming-conventions",
+    "commit-conventions",
+    "documentation",
+    "next-friday",
+    "development-standards",
+    "code-style",
+    "workflow"
+  ],
+  "homepage": "https://github.com/next-friday/nfd-core-engineering-guideline#readme",
+  "bugs": {
+    "url": "https://github.com/next-friday/nfd-core-engineering-guideline/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/next-friday/nfd-core-engineering-guideline.git"
+  },
+  "license": "MIT",
+  "author": "Next Friday <nextfriday.developer@gmail.com>",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "markdownlint": "pnpm exec markdownlint \"**/*.md\" --config .markdownlint.json --fix",
+    "markdownlint:check": "pnpm exec markdownlint \"**/*.md\" --config .markdownlint.json",
+    "prepare": "husky",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "sort-package-json": "pnpm exec sort-package-json",
+    "sort-package-json:check": "pnpm exec sort-package-json --check"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "markdownlint": "^0.34.0",
+    "markdownlint-cli": "^0.39.0",
+    "prettier": "^3.6.2",
+    "sort-package-json": "^3.4.0"
+  },
+  "packageManager": "pnpm@10.15.1",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.15.1"
+  }
+}

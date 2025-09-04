@@ -1,0 +1,124 @@
+name: 🐛 Bug Report
+title: "[BUG]: "
+description: Create a report to help us improve
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue with the Next Friday Core Engineering Guidelines.
+
+        Before submitting this issue, please check the following places to ensure it has not already been reported or resolved:
+          - [Open Pull Requests](../../pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)
+          - [Closed Issues](../../issues?q=is%3Aissue+sort%3Aupdated-desc+is%3Aclosed)
+          - [Discussions](../../discussions)
+
+  - type: checkboxes
+    id: duplicate_check
+    attributes:
+      label: Prior Investigation
+      description: Please confirm that you have already checked for duplicate issues.
+      required: true
+      options:
+        - label: I have searched existing issues, discussions, and pull requests to confirm this is not a duplicate.
+
+  - type: input
+    id: version
+    attributes:
+      label: Version Information
+      description: |
+        Please provide version information:
+        - Node.js version: 
+        - pnpm version: 
+        - Git version:
+      placeholder: e.g. Node.js 22.0.0, pnpm 10.15.1, Git 2.42.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: Provide a clear and concise description of the issue with the engineering guidelines or tooling.
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Related Documentation
+      description: |
+        If applicable, link to the specific guideline document or section where the issue occurs.
+        Reference specific files like NAMING_CONVENTION.md, COMMIT_CONVENTION.md, etc.
+      placeholder: e.g. docs/NAMING_CONVENTION.md section 3, .commitlintrc.json configuration
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Describe how to reproduce the bug step by step.
+      placeholder: |
+        1. Clone the repository
+        2. Run 'pnpm install'
+        3. Execute 'pnpm markdownlint'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: Describe what you expected to happen according to the guidelines.
+      placeholder: According to the documentation standard, I expected ___ behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: Describe what actually happened.
+      placeholder: Instead, I observed ___ which conflicts with the established guidelines.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots_or_videos
+    attributes:
+      label: Screenshots or Command Output
+      description: If applicable, add screenshots of errors, command output, or linting results.
+      placeholder: You can drag files or paste command output into this area.
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: The operating system where the issue occurred.
+      placeholder: e.g. macOS 14.5, Windows 11, Ubuntu 22.04
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Issue Category
+      description: Select the category that best describes this issue.
+      options:
+        - "Documentation Standards"
+        - "Naming Conventions"
+        - "Commit Message Format"
+        - "Branching Strategy"
+        - "Linting Configuration"
+        - "Pre-commit Hooks"
+        - "Package Management"
+        - "Other (please describe in context)"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Development Environment
+      description: Provide additional context about your development setup.
+      placeholder: e.g. VS Code 1.85.0, Terminal type, Shell version

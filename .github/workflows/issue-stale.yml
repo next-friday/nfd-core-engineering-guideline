@@ -1,0 +1,60 @@
+name: Stale Issue Management
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 1 * * *"
+
+defaults:
+  run:
+    shell: bash
+
+permissions:
+  issues: write
+  pull-requests: write
+  actions: write
+
+jobs:
+  manage-stale-issues:
+    name: Close Stale Issues and PRs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        name: Close stale issues and pull requests
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-issue-message: >
+            This issue has been marked as stale due to 30 days of inactivity.
+            Engineering guidelines discussions require ongoing engagement.
+            This issue will be closed automatically in 7 days if no activity occurs.
+            Please comment if this issue is still relevant or requires attention.
+
+            _Note: This is an automated message._
+          close-issue-message: >
+            This issue has been automatically closed due to inactivity.
+            Engineering guidelines require active maintenance and discussion.
+            If you believe this issue is still relevant, please feel free to reopen it or create a new issue.
+
+            _Note: This is an automated message._
+          stale-pr-message: >
+            This pull request has been marked as stale due to 14 days of inactivity.
+            Engineering guideline changes require timely review and implementation.
+            This PR will be closed automatically in 7 days if no activity occurs.
+            Please update or comment if this change is still needed.
+
+            _Note: This is an automated message._
+          close-pr-message: >
+            This pull request has been automatically closed due to inactivity.
+            Engineering guideline changes must be kept current and relevant.
+            If this change is still needed, please feel free to reopen or create a new pull request.
+
+            _Note: This is an automated message._
+          days-before-issue-close: 7
+          days-before-issue-stale: 30
+          stale-pr-label: stale
+          stale-issue-label: stale
+          days-before-pr-close: 7
+          days-before-pr-stale: 14
+          exempt-issue-labels: roadmap,enhancement,bug,urgent,pinned
+          exempt-pr-labels: priority,urgent,work-in-progress
+          operations-per-run: 100

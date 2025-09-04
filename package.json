@@ -25,16 +25,20 @@
   "license": "MIT",
   "author": "Next Friday <nextfriday.developer@gmail.com>",
   "scripts": {
+    "changeset": "changeset",
     "preinstall": "npx only-allow pnpm",
     "markdownlint": "pnpm exec markdownlint \"**/*.md\" --config .markdownlint.json --fix",
     "markdownlint:check": "pnpm exec markdownlint \"**/*.md\" --config .markdownlint.json",
     "prepare": "husky",
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
+    "release": "changeset publish",
     "sort-package-json": "pnpm exec sort-package-json",
-    "sort-package-json:check": "pnpm exec sort-package-json --check"
+    "sort-package-json:check": "pnpm exec sort-package-json --check",
+    "version": "changeset version"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.6",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "husky": "^9.1.7",

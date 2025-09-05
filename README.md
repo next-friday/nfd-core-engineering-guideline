@@ -18,26 +18,26 @@
 
 ### Naming Conventions
 
-**[📖 NAMING_CONVENTION.md](./docs/NAMING_CONVENTION.md)**
+**[NAMING_CONVENTION.md](./docs/NAMING_CONVENTION.md)**
 
 Comprehensive naming standards across 8 categories: GitHub repositories, databases, cloud resources, storage,
 services, monitoring, domains, and collaboration tools.
 
 ### Commit Conventions
 
-**[📖 COMMIT_CONVENTION.md](./docs/COMMIT_CONVENTION.md)**
+**[COMMIT_CONVENTION.md](./docs/COMMIT_CONVENTION.md)**
 
 Strictly enforced conventional commit format with automated validation via commitlint.
 
 ### Documentation Standards
 
-**[📖 DOCUMENTATION_STANDARD.md](./docs/DOCUMENTATION_STANDARD.md)**
+**[DOCUMENTATION_STANDARD.md](./docs/DOCUMENTATION_STANDARD.md)**
 
 Guidelines for writing, organizing, and maintaining all technical documentation with mandatory review cycles.
 
 ### Branching Strategy
 
-**[📖 BRANCHING_STRATEGY.md](./docs/BRANCHING_STRATEGY.md)**
+**[BRANCHING_STRATEGY.md](./docs/BRANCHING_STRATEGY.md)**
 
 Git branching workflow with main/sit/dev branches, feature development process, and release management procedures.
 

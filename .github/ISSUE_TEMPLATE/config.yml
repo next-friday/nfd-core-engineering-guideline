@@ -1,14 +1,14 @@
 blank_issues_enabled: false
 
 contact_links:
-  - name: Feature Request or Enhancement
+  - name: ✨ Feature Request or Enhancement
     url: https://github.com/nextfriday/nfd-core-engineering-guideline/discussions/categories/feature-requests
     about: Suggest new engineering standards or improvements to existing guidelines
 
-  - name: Questions & Ideas Discussion
+  - name: 💬 Questions & Ideas Discussion
     url: https://github.com/nextfriday/nfd-core-engineering-guideline/discussions
     about: Ask questions about implementation or discuss new engineering practices
 
-  - name: Next Friday Engineering Team
-    url: mailto:nextfriday.developer@gmail.com
+  - name: 📧 Next Friday Engineering Team
+    url: https://github.com/nextfriday/nfd-core-engineering-guideline/discussions/categories/general
     about: Contact the engineering team directly for urgent guideline clarifications

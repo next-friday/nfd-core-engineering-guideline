@@ -2,11 +2,11 @@ blank_issues_enabled: false
 
 contact_links:
   - name: Feature Request or Enhancement
-    url: ../../discussions/categories/feature-requests
+    url: https://github.com/nextfriday/nfd-core-engineering-guideline/discussions/categories/feature-requests
     about: Suggest new engineering standards or improvements to existing guidelines
 
   - name: Questions & Ideas Discussion
-    url: ../../discussions
+    url: https://github.com/nextfriday/nfd-core-engineering-guideline/discussions
     about: Ask questions about implementation or discuss new engineering practices
 
   - name: Next Friday Engineering Team

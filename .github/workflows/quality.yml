@@ -23,28 +23,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: "10.15.1"
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: "pnpm"
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: "10.15.1"
-
       - name: Install Dependencies
         run: pnpm install
 
       - name: Check Markdown Quality
-        run: pnpm markdownlint:check
+        run: pnpm run markdownlint:check
 
       - name: Check Code Formatting
-        run: pnpm prettier:check
+        run: pnpm run prettier:check
 
       - name: Check Package.json Sorting
-        run: pnpm sort-package-json:check
+        run: pnpm run sort-package-json:check
 
       - name: Validate File Naming Convention
         run: |

@@ -63,6 +63,19 @@ pnpm markdownlint:fix
 pnpm sort-package-json
 ```
 
+### Release Management Commands
+
+```bash
+# Create a new changeset
+pnpm changeset
+
+# Version packages based on changesets
+pnpm version
+
+# Publish releases
+pnpm release
+```
+
 ### Git Hooks
 
 Pre-commit hooks are configured via Husky:
@@ -117,6 +130,9 @@ docs/                    # Core documentation standards
 ├── COMMIT_CONVENTION.md  # Conventional commit rules
 ├── DOCUMENTATION_STANDARD.md  # Documentation guidelines
 └── BRANCHING_STRATEGY.md # Git workflow and branching standards
+.changeset/              # Release management
+├── config.json          # Changesets configuration
+└── README.md            # Changesets usage guide
 .claude/                 # Context engineering system
 ├── CLAUDE.md            # Context engineering guidance (this file)
 ├── settings.json        # Claude Code project settings

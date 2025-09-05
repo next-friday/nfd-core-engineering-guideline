@@ -45,12 +45,11 @@ Git branching workflow with main/sit/dev branches, feature development process, 
 
 ## Core Principles
 
-| Principle        | Rule                                  | Benefit                         |
-| ---------------- | ------------------------------------- | ------------------------------- |
-| **Consistency**  | One standard for all projects         | Reduces context switching       |
-| **Clarity**      | Self-explanatory names and structures | Faster onboarding and debugging |
-| **Scalability**  | Patterns support future growth        | Prevents technical debt         |
-| **Global-ready** | English-first, international          | Enables global collaboration    |
+| Principle       | Rule                                  | Benefit                         |
+| --------------- | ------------------------------------- | ------------------------------- |
+| **Consistency** | One standard for all projects         | Reduces context switching       |
+| **Clarity**     | Self-explanatory names and structures | Faster onboarding and debugging |
+| **Scalability** | Patterns support future growth        | Prevents technical debt         |
 
 ---
 

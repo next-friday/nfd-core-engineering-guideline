@@ -1,10 +1,14 @@
+blank_issues_enabled: false
+
 contact_links:
   - name: Feature Request or Enhancement
     url: ../../discussions/categories/feature-requests
     about: Suggest new engineering standards or improvements to existing guidelines
+
   - name: Questions & Ideas Discussion
     url: ../../discussions
     about: Ask questions about implementation or discuss new engineering practices
+
   - name: Next Friday Engineering Team
     url: mailto:nextfriday.developer@gmail.com
     about: Contact the engineering team directly for urgent guideline clarifications

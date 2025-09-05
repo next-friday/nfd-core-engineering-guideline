@@ -160,7 +160,6 @@ docs/                    # Core documentation standards
   - Never disable linting rules - all rules must be enforced
 - **Professional Standards**: Maintain strict professional tone across all repositories
 - **Consistency**: Follow established patterns in existing files
-- **Global-readiness**: English-first, international team friendly
 - **Markdown Standards**: All markdown files must pass markdownlint validation with configuration in
   `.markdownlint.json`
 
